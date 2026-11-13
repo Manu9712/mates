@@ -1,0 +1,68 @@
+:root{--ink:#28251f;--muted:#70695e;--cream:#f7f3eb;--paper:#fffdf8;--brown:#68472f;--brown2:#8b6241;--line:#e8dfd1;--gold:#c69a52}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer}
+.topline{background:#29251f;color:#f8f1e6;text-align:center;padding:9px 14px;font-size:12px;letter-spacing:.08em}
+header{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:23px;font-weight:bold;letter-spacing:.02em}.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:.22em;color:var(--muted);margin-top:3px}
+    .navlinks{display:flex;gap:25px;font-size:13px;color:#514b42}.navlinks a:hover{color:var(--brown2)}
+    .cartbtn{border:1px solid var(--line);background:var(--paper);border-radius:30px;padding:10px 15px;color:var(--ink);font-weight:bold}
+    .count{display:inline-grid;place-items:center;background:var(--brown);color:white;width:21px;height:21px;border-radius:50%;font-size:11px;margin-left:6px}
+    .hero{min-height:590px;display:grid;grid-template-columns:1.05fr .95fr;background:#2b261f;color:#fffaf1;overflow:hidden}
+    .hero-copy{padding:clamp(48px,8vw,110px) max(25px,calc((100vw - 1120px)/2));padding-right:40px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#d7b77f;margin-bottom:20px}
+    h1{font:clamp(42px,5.6vw,72px)/1.04 Georgia,serif;font-weight:normal;margin:0 0 22px;max-width:620px}
+    .hero p{max-width:480px;color:#e2d8c9;line-height:1.8;font-size:16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:3px;font-weight:bold;font-size:13px;border:1px solid transparent}
+    .btn-gold{background:#d0ad72;color:#211c16}.btn-outline{border-color:#887b68;color:#fffaf1}
+    .hero-photo{min-height:500px;background:linear-gradient(90deg,#2b261f 0%,transparent 25%),url('https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-imperial-bolitas-acero.webp') center/cover}
+    .intro{max-width:1100px;margin:0 auto;padding:78px 24px 42px;text-align:center}
+    .intro h2,.section-head h2{font:clamp(32px,4vw,48px) Georgia,serif;font-weight:normal;margin:10px 0 14px}
+    .intro p{color:var(--muted);line-height:1.8;max-width:650px;margin:0 auto}
+    .features{max-width:1100px;margin:0 auto;padding:25px 24px 75px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .feature{padding:22px 18px;background:var(--paper);border:1px solid var(--line);text-align:center}
+    .feature b{display:block;font:19px Georgia,serif;margin:8px 0}.feature span{font-size:12px;line-height:1.6;color:var(--muted)}
+    .shop{background:#eee7db;padding:75px 24px}
+    .shop-inner{max-width:1120px;margin:auto}.section-head{text-align:center;margin-bottom:34px}
+    .section-head p{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .product{background:var(--paper);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+    .product img{width:100%;height:300px;object-fit:cover;background:#e7ddce;display:block}
+    .product-info{padding:19px;display:flex;flex-direction:column;flex:1}
+    .tag{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--brown2)}
+    .product h3{font:22px Georgia,serif;font-weight:normal;margin:9px 0}
+    .desc{color:var(--muted);font-size:13px;line-height:1.6;min-height:40px}
+    .price{font-weight:bold;font-size:18px;margin:14px 0}
+    .add{background:var(--brown);color:white;border:0;padding:13px;border-radius:2px;font-weight:bold}
+    .add:hover{background:var(--brown2)}
+    .shop-controls{display:flex;align-items:end;justify-content:center;gap:18px;flex-wrap:wrap;margin:0 0 25px}
+    .shop-controls[hidden]{display:none}.shop-controls label{display:grid;gap:7px;font-size:13px;color:var(--muted)}
+    .shop-controls select{padding:11px 14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:3px;min-width:170px}
+    .shop-more{text-align:center;margin-top:30px}.shop-more button{cursor:pointer}
+    #resultCount{font-size:13px;color:var(--muted);padding-bottom:12px}
+    .story{max-width:1050px;margin:0 auto;padding:85px 24px;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .story img{width:100%;max-height:430px;object-fit:cover}
+    .story h2{font:clamp(32px,4vw,46px) Georgia,serif;font-weight:normal;margin:10px 0 18px}
+    .story p{color:var(--muted);line-height:1.85;font-size:14px}
+    .steps{background:#2b261f;color:#fffaf1;padding:75px 24px}
+    .steps-inner{max-width:1050px;margin:auto}.steps h2{text-align:center;font:42px Georgia,serif;font-weight:normal;margin:0 0 40px}
+    .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+    .step-num{color:#d0ad72;font:38px Georgia,serif}.step h3{font:22px Georgia,serif;font-weight:normal}.step p{color:#d8cfc2;line-height:1.7;font-size:13px}
+    .faq{max-width:850px;margin:auto;padding:80px 24px}.faq h2{text-align:center;font:42px Georgia,serif;font-weight:normal;margin:0 0 28px}
+    details{border-bottom:1px solid var(--line);padding:17px 2px}summary{font-weight:bold;cursor:pointer;font-size:14px}details p{color:var(--muted);line-height:1.7;font-size:13px}
+    footer{background:#211e19;color:#f8f1e6;padding:42px 24px;text-align:center}footer p{color:#c9c0b3;font-size:13px;line-height:1.8}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:15;background:#208c55;color:white;padding:14px 18px;border-radius:40px;font-weight:bold;box-shadow:0 5px 22px #0003}
+    .overlay{position:fixed;inset:0;background:#0008;z-index:30;opacity:0;visibility:hidden;transition:.2s}
+    .overlay.open{opacity:1;visibility:visible}
+    .drawer{position:fixed;right:0;top:0;height:100%;width:min(430px,100%);background:var(--paper);z-index:31;transform:translateX(100%);transition:.25s;padding:24px;display:flex;flex-direction:column}
+    .drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:16px}
+    .drawer h2{font:29px Georgia,serif;font-weight:normal;margin:0}.close{border:0;background:none;font-size:27px}
+    #cartItems{overflow:auto;flex:1;padding:15px 0}.cart-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px 0;border-bottom:1px solid var(--line)}
+    .cart-row small{display:block;color:var(--muted);margin-top:5px}.qty{display:flex;align-items:center;gap:9px}.qty button{border:1px solid var(--line);background:white;width:27px;height:27px;border-radius:50%}
+    .total{display:flex;justify-content:space-between;font-weight:bold;font-size:18px;padding:18px 0;border-top:1px solid var(--line)}
+    .checkout{width:100%;border:0;background:#208c55;color:white;padding:15px;font-weight:bold;border-radius:3px}
+    .empty{color:var(--muted);text-align:center;padding:45px 10px;line-height:1.6}
+    @media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:65px 25px 45px}.hero-photo{min-height:330px;background-position:center}.features{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.product img{height:220px}.product-info{padding:14px}.product h3{font-size:19px}.story{grid-template-columns:1fr;gap:25px}.step-grid{grid-template-columns:1fr;gap:18px}.steps h2{font-size:34px}}
+    @media(max-width:430px){.grid{grid-template-columns:1fr}.product img{height:290px}.brand{font-size:20px}.features{padding-left:14px;padding-right:14px;gap:8px}.feature{padding:17px 10px}}
+  
