@@ -173,4 +173,179 @@ function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();openCart()}
     renderProducts();renderCart();
   </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mundo Mate 10 - Mates artesanales, bombillas y accesorios desde Rosario.">
+  <title>Mundo Mate 10 | Tienda online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline">MATES ARTESANALES · HECHOS EN ROSARIO · ENVÍOS A TODO EL PAÍS</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">MUNDO MATE 10<small>TRADICIÓN ARGENTINA</small></a>
+      <div class="navlinks"><a href="#tienda">Tienda</a><a href="#nosotros">Nuestra historia</a><a href="#comprar">Cómo comprar</a><a href="#preguntas">Preguntas</a></div>
+      <button class="cartbtn" onclick="openCart()">Mi pedido <span class="count" id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Mates artesanales · Rosario</div>
+        <h1>Un buen mate no se improvisa. Se arma pieza por pieza.</h1>
+        <p>Mates de calabaza con virola de alpaca, acero y bronce. Elegí el que más te guste y consultanos por WhatsApp.</p>
+        <div class="actions"><a class="btn btn-gold" href="#tienda" onclick="if(!showingAll)showAllProducts()">VER LA TIENDA</a><a class="btn btn-outline" href="#nosotros">CONOCÉ MÁS</a></div>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Mate artesanal de calabaza con virola cincelada"></div>
+    </section>
+
+    <section class="intro">
+      <div class="eyebrow">Detalles que hacen la diferencia</div>
+      <h2>El corazón está en los detalles</h2>
+      <p>Calabaza, cuero, virolas trabajadas y accesorios pensados para acompañar cada ronda. Piezas con personalidad, listas para convertirse en tu mate de todos los días.</p>
+    </section>
+    <section class="features">
+      <div class="feature"><b>Calabaza y cuero</b><span>Piezas seleccionadas y terminaciones cuidadas.</span></div>
+      <div class="feature"><b>Base firme</b><span>Detalles que aportan estabilidad y presencia.</span></div>
+      <div class="feature"><b>Virola trabajada</b><span>Terminaciones en alpaca, acero o bronce.</span></div>
+      <div class="feature"><b>Envíos nacionales</b><span>Despachamos desde Rosario a todo el país.</span></div>
+    </section>
+
+    <section class="shop" id="tienda">
+      <div class="shop-inner">
+        <div class="section-head"><div class="eyebrow">Elegí el tuyo</div><h2 id="shopTitle">Lo que más nos piden</h2><p id="shopSubtitle">Seis de los dieciocho que tenemos listos para salir. Precios de referencia sujetos a confirmación por WhatsApp.</p></div>
+        <div class="shop-controls" id="shopControls" hidden>
+          <label for="categoryFilter">Categoría <select id="categoryFilter" onchange="renderProducts()"><option value="Todo">Todo</option><option>Mates</option><option>Bombillas</option><option>Accesorios</option></select></label>
+          <label for="sortProducts">Ordenar por <select id="sortProducts" onchange="renderProducts()"><option value="default">Orden original</option><option value="low">Menor precio</option><option value="high">Mayor precio</option><option value="name">Nombre A–Z</option></select></label>
+          <span id="resultCount" aria-live="polite"></span>
+        </div>
+        <div class="grid" id="products"></div>
+        <div class="shop-more" id="shopMore"><button class="btn btn-gold" onclick="showAllProducts()">VER LOS DIECIOCHO</button></div>
+      </div>
+    </section>
+
+    <section class="story" id="nosotros">
+      <img src="https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-bombillon-alpaca-sol-de-mayo.webp" alt="Bombillón artesanal de alpaca sobre una mesa de madera">
+      <div><div class="eyebrow">Mundo Mate 10 · Rosario</div><h2>El mate no se elige por catálogo. Se elige por sus detalles.</h2>
+      <p>Cada calabaza tiene su propia forma, textura y personalidad. Por eso nos gusta mostrarte cada pieza y ayudarte a encontrar la que va con vos.</p>
+      <p>Escribinos si querés consultar por medidas, materiales, disponibilidad o recomendaciones para elegir tu próximo mate.</p>
+      <a class="btn btn-gold" href="https://wa.me/5493412810432?text=Hola%20Mundo%20Mate%2010%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener">HACER UNA CONSULTA</a></div>
+    </section>
+
+    <section class="steps" id="comprar"><div class="steps-inner"><h2>¿Cómo comprás?</h2>
+      <div class="step-grid">
+        <div class="step"><div class="step-num">01</div><h3>Elegís</h3><p>Recorré la tienda y agregá al carrito los productos que te gusten.</p></div>
+        <div class="step"><div class="step-num">02</div><h3>Nos escribís</h3><p>Enviá tu pedido por WhatsApp. Te confirmamos disponibilidad, envío y forma de pago.</p></div>
+        <div class="step"><div class="step-num">03</div><h3>Lo recibís</h3><p>Coordinamos el envío a tu localidad o el retiro en Rosario.</p></div>
+      </div>
+    </div></section>
+
+    <section class="faq" id="preguntas"><div class="eyebrow" style="text-align:center">Preguntas frecuentes</div><h2>Lo que querés saber</h2>
+      <details><summary>¿Hacen envíos a todo el país?</summary><p>Sí. Despachamos desde Rosario. El costo y el plazo se coordinan por WhatsApp al confirmar el pedido.</p></details>
+      <details><summary>¿Puedo retirar en Rosario?</summary><p>Sí. Escribinos para coordinar el punto y el horario de retiro.</p></details>
+      <details><summary>¿Cómo puedo pagar?</summary><p>Los medios de pago se acuerdan por WhatsApp junto con los detalles del envío.</p></details>
+      <details><summary>¿Los mates vienen curados?</summary><p>Los mates de calabaza se entregan sin curar. Consultanos y te explicamos cómo prepararlo para el primer uso.</p></details>
+    </section>
+  </main>
+
+  <footer><div class="brand">MUNDO MATE 10</div><p>Tradición argentina · Rosario, Santa Fe<br>Consultas y pedidos por WhatsApp</p><p>© <span id="year"></span> Mundo Mate 10</p></footer>
+  <a class="wa-float" href="https://wa.me/5493412810432?text=Hola%20Mundo%20Mate%2010" target="_blank" rel="noopener">WhatsApp</a>
+
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras">
+    <div class="drawer-head"><h2>Tu pedido</h2><button class="close" onclick="closeCart()" aria-label="Cerrar">×</button></div>
+    <div id="cartItems"><div class="empty">Todavía no agregaste productos.</div></div>
+    <div class="total"><span>Total estimado</span><span id="cartTotal">$ 0</span></div>
+    <button class="checkout" onclick="sendWhatsApp()">ENVIAR PEDIDO POR WHATSAPP</button>
+    <p style="font-size:11px;color:var(--muted);line-height:1.5">El pedido se confirma por WhatsApp. Stock, precio final, envío y pago quedan sujetos a confirmación.</p>
+  </aside>
+
+  <script>
+    // EDITÁ AQUÍ los productos, precios, fotos y categorías.
+    // Los precios de esta primera versión son los que aparecen en la demo y deben verificarse antes de publicar.
+    const WHATSAPP_NUMBER = "543412810432";
+    const products = [
+      {"id": 1, "name": "Mate imperial con bolitas de acero", "category": "Mates", "price": 30000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-imperial-bolitas-acero.webp"},
+      {"id": 2, "name": "Mate torpedo con virola cincelada", "category": "Mates", "price": 30000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-torpedo-virola-cincelada.webp"},
+      {"id": 3, "name": "Mate torpedo con virola de acero", "category": "Mates", "price": 28000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-torpedo-virola-acero.webp"},
+      {"id": 4, "name": "Mate con virola repujada en flor", "category": "Mates", "price": 30000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-tradicion.webp"},
+      {"id": 5, "name": "Mate con virola de bronce en damero", "category": "Mates", "price": 26000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-sin-titulo-2.webp"},
+      {"id": 6, "name": "Mate de boca ancha con virola en greca", "category": "Mates", "price": 26000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-sin-titulo-1.webp"},
+      {"id": 7, "name": "Mate torpedo Roma de calabaza", "category": "Mates", "price": 3600, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-torpedo-roma-calabaza.webp"},
+      {"id": 8, "name": "Mate ranchero de calabaza", "category": "Mates", "price": 29000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-ranchero.webp"},
+      {"id": 9, "name": "Mate ranchero pintado", "category": "Mates", "price": 30000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-ranchero-pintado.webp"},
+      {"id": 10, "name": "Mate blanco con virola en greca", "category": "Mates", "price": 28000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-blanco-greca.webp"},
+      {"id": 11, "name": "Mate con virola dorada cincelada", "category": "Mates", "price": 36000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-virola-dorada-par.webp"},
+      {"id": 12, "name": "Mate algarrobo", "category": "Mates", "price": 23000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-mate-algarrobo.webp"},
+      {"id": 13, "name": "Bombillón pico de loro con sol de mayo", "category": "Bombillas", "price": 25000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-bombillon-alpaca-sol-de-mayo.webp"},
+      {"id": 14, "name": "Bombillón pico de loro de alpaca", "category": "Bombillas", "price": 25000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-bombillon-pico-de-loro-alpaca.webp"},
+      {"id": 15, "name": "Bombilla pico de loro de acero y bronce", "category": "Bombillas", "price": 10000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-bombilla-pico-de-loro-acero-bronce.webp"},
+      {"id": 16, "name": "Apoya mate celeste con sol dorado", "category": "Accesorios", "price": 15000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-apoya-mates-argentina.webp"},
+      {"id": 17, "name": "Escurridor de mate y bombilla", "category": "Accesorios", "price": 15000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-escurridor-mate-bombilla.webp"},
+      {"id": 18, "name": "Pico system de 5 cm de diámetro", "category": "Accesorios", "price": 8000, "description": "", "image": "https://demo.theapexweb.com/demos/mundo-mate-10-a871/tarjeta-pico-system.webp"}
+    ];
+    const cart = {};
+    const money = n => new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(n);
+         let showingAll = false;
+     const featuredIds = [1,2,13,16,17,18];
+     function showAllProducts(){
+       showingAll = true;
+       document.getElementById("shopTitle").textContent="Toda la tienda";
+       document.getElementById("shopSubtitle").textContent="Dieciocho piezas, una de cada una. Precios de referencia sujetos a confirmación por WhatsApp.";
+       document.getElementById("shopControls").hidden=false;
+       document.getElementById("shopMore").hidden=true;
+       renderProducts();
+       document.getElementById("tienda").scrollIntoView({behavior:"smooth"});
+     }
+     function renderProducts(){
+       let visible = showingAll ? [...products] : featuredIds.map(id=>products.find(p=>p.id===id));
+       if(showingAll){
+         const category=document.getElementById("categoryFilter").value;
+         if(category!=="Todo")visible=visible.filter(p=>p.category===category);
+         const sort=document.getElementById("sortProducts").value;
+         if(sort==="low")visible.sort((a,b)=>a.price-b.price);
+         if(sort==="high")visible.sort((a,b)=>b.price-a.price);
+         if(sort==="name")visible.sort((a,b)=>a.name.localeCompare(b.name,"es"));
+         document.getElementById("resultCount").textContent=`${visible.length} ${visible.length===1?"pieza":"piezas"}`;
+       }
+       document.getElementById("products").innerHTML = visible.map(p => `
+         <article class="product">
+           <img src="${p.image}" alt="${p.name}" loading="lazy">
+           <div class="product-info">
+             <div class="tag">${p.category}</div><h3>${p.name}</h3>
+             ${p.description ? `<div class="desc">${p.description}</div>` : ""}
+             <div class="price">${money(p.price)}</div>
+             <button class="add" onclick="addToCart(${p.id})">AGREGAR AL PEDIDO</button>
+           </div>
+         </article>`).join("");
+     }
+function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();openCart()}
+    function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}
+    function renderCart(){
+      const entries=Object.entries(cart);const count=entries.reduce((s,[,q])=>s+q,0);
+      document.getElementById("cartCount").textContent=count;
+      const total=entries.reduce((s,[id,q])=>s+products.find(p=>p.id===Number(id)).price*q,0);
+      document.getElementById("cartTotal").textContent=money(total);
+      document.getElementById("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{
+        const p=products.find(x=>x.id===Number(id));
+        return `<div class="cart-row"><div><b>${p.name}</b><small>${money(p.price)} c/u</small></div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><b>${q}</b><button onclick="changeQty(${p.id},1)">+</button></div></div>`;
+      }).join(""):'<div class="empty">Todavía no agregaste productos.<br>Volvé a la tienda para elegir tus favoritos.</div>';
+    }
+    function openCart(){document.getElementById("overlay").classList.add("open");document.getElementById("drawer").classList.add("open")}
+    function closeCart(){document.getElementById("overlay").classList.remove("open");document.getElementById("drawer").classList.remove("open")}
+    function sendWhatsApp(){
+      const entries=Object.entries(cart);
+      if(!entries.length){alert("Agregá al menos un producto al pedido.");return}
+      let total=0;let lines=entries.map(([id,q])=>{const p=products.find(x=>x.id===Number(id));total+=p.price*q;return `• ${p.name} x ${q} — ${money(p.price*q)}`});
+      const message=`¡Hola Mundo Mate 10! Quiero consultar por este pedido:\n\n${lines.join("\n")}\n\nTotal estimado: ${money(total)}\n\n¿Me confirman disponibilidad, envío y medios de pago?`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank");
+    }
+    document.getElementById("year").textContent=new Date().getFullYear();
+    renderProducts();renderCart();
+  </script>
+</body>
 </html>
